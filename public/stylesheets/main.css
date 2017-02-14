@@ -94,7 +94,7 @@ h1 {
         top: 0;
         width: 51%;
         height: 100%;
-        background: #222222;
+        background: black;
         z-index: 1000;
         -webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
         -ms-transform: translateX(0);  /* IE 9 */
@@ -227,17 +227,7 @@ h1 {
     visibility: hidden;
 }
 
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
+
 
 .clearfix:before,
 .clearfix:after {
@@ -249,106 +239,83 @@ h1 {
     clear: both;
 }
 
-/*
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
+
 
 .clearfix {
     *zoom: 1;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
+
 
 @media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+
 }
 
 @media print,
        (-o-min-device-pixel-ratio: 5/4),
        (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
 
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid required HTTP connection: h5bp.com/r
-   ========================================================================== */
+    @media print {
+        * {
+            background: transparent !important;
+            color: #000 !important; /* Black prints faster: h5bp.com/s */
+            box-shadow: none !important;
+            text-shadow: none !important;
+        }
 
-@media print {
-    * {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster: h5bp.com/s */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
+        a,
+        a:visited {
+            text-decoration: underline;
+        }
 
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
+        a[href]:after {
+            content: " (" attr(href) ")";
+        }
 
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
+        abbr[title]:after {
+            content: " (" attr(title) ")";
+        }
 
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
+        .ir a:after,
+        a[href^="javascript:"]:after,
+        a[href^="#"]:after {
+            content: "";
+        }
 
-    /*
-     * Don't show links for images, or javascript/internal links
-     */
+        pre,
+        blockquote {
+            border: 1px solid #999;
+            page-break-inside: avoid;
+        }
 
-    .ir a:after,
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after {
-        content: "";
-    }
+        thead {
+            display: table-header-group; /* h5bp.com/t */
+        }
 
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
+        tr,
+        img {
+            page-break-inside: avoid;
+        }
 
-    thead {
-        display: table-header-group; /* h5bp.com/t */
-    }
+        img {
+            max-width: 100% !important;
+        }
 
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
+        @page {
+            margin: 0.5cm;
+        }
 
-    img {
-        max-width: 100% !important;
-    }
+        p,
+        h2,
+        h3 {
+            orphans: 3;
+            widows: 3;
+        }
 
-    @page {
-        margin: 0.5cm;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
+        h2,
+        h3 {
+            page-break-after: avoid;
+        }
     }
 }
-
-/* 
-	Ok so you have made it this far, that means you are very keen to on my code. 
-	Anyway I don't really mind it. This is a great way to learn so you actually doing the right thing:)
-	Follow me @ihatetomatoes
-*/

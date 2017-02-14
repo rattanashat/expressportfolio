@@ -1,3 +1,35 @@
 <%include ./partials/header.ejs%>
-<h3>Contact Me</h3>
+<h2 style="text-align: center">Contact Me</h2>
+
+<img src="images/business.png" alt="Web" style="width: 200px;;height:150px;" align="left">
+
+<a href="mailto:ratz407@gmail.com?subject=Feedback&body=Message">
+    <img class ="email" src="images/email.png"  alt="Web" style="width: 200px;;height:75px;" align="right"></a>
+<center>
+
+<form style="text-align: center">
+    <div class="form-group row">
+        <label for="example-text-input" class="col-2 col-form-label">Full Name</label>
+        <div class="col-10">
+            <input class="form-control" type="text" value="Your Full Name Here" id="example-text-input">
+        </div>
+        <br>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+
+            <div class="form-group">
+                <label for="exampleTextarea">Comments</label>
+                <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+            </div>
+        </div></div>
+   <center> <button type="submit" class="btn btn-primary">Submit</button></center>
+
+</form></center>
+
+
+
 <%include ./partials/footer.ejs%>

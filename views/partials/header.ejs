@@ -1,9 +1,6 @@
 <html>
 <head>
 
-
-
-
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Rattan</title>
@@ -20,12 +17,6 @@
   <link rel="stylesheet" href="stylesheets/normalize.css">
   <link rel="stylesheet" href="stylesheets/main.css">
   <script src="javascripts/vendor/modernizr-2.6.2.min.js"></script>
-
-
-
-
-
-
   <style type="text/css">
 
 
@@ -60,20 +51,38 @@
     #demo-content {
       padding-top: 100px;
     }
-    body    { padding-top:50px; }
+    .navbar {
+      background-color: transparent;
+      background: transparent;
+      border-color: transparent;
+      font-family: "Comic Sans MS";
+
+    }
+    .nav.navbar-nav li a {
+      color: grey;
+    }
+    .nav .navbar-nav li a:hover {
+      color: white;
+    }
+
+
   </style>
 </head>
-<body class="demo">
+<body class="demo" style="background-color: black">
 
-<nav class="navbar navbar-inverse" role="navigation">
-  <div class="container-fluid">
-    <ul class="nav navbar-nav">
-    <li>
-      <a href="/">Rattan Ashat</a></li>
-    <li><a href="/aboutme">About Me</a>
-    </li>
-    <li><a href="/contactme">Contact Me</a> </li>
+<nav class="navbar navbar-default">
+  <div class="navbar-header">
 
-  </ul>
+    <a class="navbar-brand" href="/">Rattan Ashat</a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbar">
+
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/aboutme">About Me</a>
+      </li>
+      <li><a href="/contactme">Contact Me</a>
+      </li>
+
+    </ul>
   </div>
 </nav>
